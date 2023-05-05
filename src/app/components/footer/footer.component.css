@@ -1,0 +1,11 @@
+.row{
+    background-color: bisque;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color:crimson;
+    font-size: 80%;
+    box-shadow: 2px -2px 5px rgb(6, 125, 161);
+}

@@ -1,0 +1,40 @@
+<section id="experiencia" class="experiencia">
+  <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent rounded" >
+    <div class="row mb-2">
+      <h3 class="text-center">Experiencia</h3>
+       <p class="text-center"> Aclaración: Por el momento no tengo experiencias</p>
+    </div>
+    <div class="col-lg-2" *ngIf="isLogged">
+      <button type="button"  class="btn btn-success" routerLink="/addExperiencia">
+        <i class="bi bi-plus-square-fill "></i>
+        Nuevo 
+      </button>
+    </div>
+ 
+    <br>
+    <div class="card mb-3 text-bg-dark" style="max-width: 150%;" *ngFor="let Experiencia of experiencias">
+      <br>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end " *ngIf="isLogged">
+         <button type="submit" class="btn btn-primary" routerLink="editExperiencia/{{Experiencia.id_experiencia}}"><i class="bi bi-pencil-square" ></i></button>
+        <button  type="button" class="btn btn-danger"  (click)="delete(Experiencia.id_experiencia)" ><i class="bi bi-x-square-fill"></i></button>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img  [src]="Experiencia.url_logoEmpresa"  class="img-fluid rounded-start" alt="..."> 
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{Experiencia.nombre}}</h5>
+            
+            <p class="card-text">{{Experiencia.descripcion}}</p>
+            <p class="card-text"><small class="text-muted">Puesto obtenido en la empresa: {{Experiencia.puesto}}</small></p>
+            <p class="card-text"><small class="text-muted">Fecha Inicio: {{Experiencia.fechaInicio | date:"dd-MM-yyyy" }}</small></p>
+            <p class="card-text"><small class="text-muted">Fecha Fin: {{Experiencia.fechaFin | date:"dd-MM-yyyy" }}</small></p>
+            <p class="card-text"><small class="text-muted">Link de la empresa:  <a [href]="Experiencia.url" class="card-link">{{Experiencia.url}}</a></small></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

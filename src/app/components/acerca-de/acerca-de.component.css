@@ -1,0 +1,45 @@
+
+.acerca-de{
+    padding: 15px;
+    background-color: bisque;
+}
+.banner{
+  background-color: bisque;
+  width: 100%;
+  height: 670px;
+  min-height: 10em;
+  max-height: 20em;
+}
+
+.perfil{
+  width: 40%;
+}
+
+#btnEditar{
+  bottom:2em;
+  right:1.2em;
+  background-color:#181313;
+  border-radius:1.5em;
+  color:white;
+}
+
+#btnEditarTexto{
+  bottom:2em;
+  right:1.2em;
+  background-color:#181313;
+  border-radius:1.5em;
+  color:white;
+}
+
+#btnEliminar{
+  bottom:2em;
+  right:1.2em;
+  background-color:#181313;
+  border-radius:1.5em;
+  color:white;
+}
+
+
+
+
+

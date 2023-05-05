@@ -1,0 +1,48 @@
+<section class="addProyecto">
+    <br>
+    <button type="button" class="btn-volver" routerLink="/"> <i class="bi bi-reply"></i> Volver</button>
+    <br>
+    <div class="container">
+        <div class="row">
+          <h1  class="form-label text-center">Agregar nuevo proyecto</h1>
+          <br>
+            <div>
+                <form (ngSubmit)="crearProyecto()" novalidate #f="ngForm">
+                    <div class="form-group mt-4">
+                        <label for="url_imgProyecto" class="form-label">Agregar imagen del proyecto</label>
+                        <input class="form-control" type="file"  id="url_imgProyecto" name="url_imgProyecto"  [(ngModel)]="url_imgProyecto" (change)="uploadImgProyecto($event)"
+                        accept=".jpg, .jpeg, .png"> 
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="tituloProyecto" class="form-label">Agregar nombre del proyecto</label>
+                        <input type="text" class="form-control"  id="tituloProyecto" name="tituloProyecto"  [(ngModel)]="tituloProyecto" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="descripcion" class="form-label">Agregar descripción del proyecto</label>
+                        <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="descripcion" ></textarea>    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaInicio" class="form-label">Agregar fecha de inicio del proyecto</label>
+                        <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="fechaInicio" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaFin" class="form-label">Agregar fecha de finalización del proyecto</label>
+                        <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="fechaFin" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="url_proyecto" class="form-label">Agregar link del proyecto</label>
+                        <input type="url" class="form-control"  id="url_proyecto" name="url_proyecto"   [(ngModel)]="url_proyecto" >    
+                    </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn-agregar" (click)="limpiar()">Limpiar</button>
+                            <button type="submit" class="btn-agregar">Agregar nuevo proyecto</button>
+                            <br><br><br>
+                        </div>
+                </form>    
+            </div>     
+        </div>
+      </div>
+      <br><br>
+  </section>
+  <app-footer></app-footer>

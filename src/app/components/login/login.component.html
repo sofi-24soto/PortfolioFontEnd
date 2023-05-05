@@ -1,0 +1,33 @@
+<div class="Frmlogin">
+  <br><br><br>
+  <form class="formulario" #f="ngForm" (ngSubmit)="onLogin()" novalidate> 
+    <br>
+    <h1>Login</h1>
+     <div class="contenedor"> 
+      <!-- Campo Usuario   -->
+      <div class="form-floating mb-3">
+        <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" required >
+        <label for="nombreUsuario">Usuario</label>
+       </div>
+      
+      <!-- Campo Contraseña -->
+        <div class="form-floating">
+          <input type="password" id="password" name="password"  class="form-control" autocomplete="on"  [(ngModel)]="password" required>
+          <label for="password">Password</label>
+        </div>
+        
+        <br><br>
+         <button type="submit" class="button">Login</button>
+         <br><br>
+         <p>¿No tienes una cuenta? <a routerLink="/registro"> Registrate </a></p>
+     </div>
+    </form>
+    <br>
+    <br>
+    <br>
+  </div>
+<app-footer></app-footer>
+
+
+
+

@@ -1,0 +1,35 @@
+<div>
+  <img [src]="persona?.url_banner" alt="banner" width="100%" class="rounded-top banner" >
+ </div>
+<section id="acerca-de" class="acerca-de " >
+  <div class="seccion container-fluid rounded shadow-sm mb-3 bg-body-transparent p-0" >  
+    <div class="row p-3">
+        <div class="col-5" >
+          <img [src]="persona?.url_fotoPerfil" class="rounded-circle perfil" alt="profileImage"> 
+          <br>
+          <h3>{{persona?.nombre}} {{persona?.apellido}}</h3>
+          <h5 >{{persona?.titulo}}</h5>
+        </div>
+        
+        <div class="col-6 text-md-start mt-4">
+          <div class="card w-85">
+            <div class="card-body">
+              <h5 class="card-title text-center">Acerca de Mi</h5>
+              <p class="card-text">{{persona?.sobreMi}}</p>  
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="submit" 
+        class="btn btn-primary me-md-2" 
+        routerLink="editPortada/{{persona?.id_persona}}" 
+        *ngIf="isLogged">
+        <i class="bi bi-pencil-square" ></i>
+        Editar Perfil
+      </button>
+    </div>
+    
+  </div>
+ 
+</section>

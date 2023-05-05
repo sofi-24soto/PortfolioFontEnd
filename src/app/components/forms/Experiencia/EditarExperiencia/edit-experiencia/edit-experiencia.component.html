@@ -1,0 +1,52 @@
+<section class="editExperiencia">
+    <br>
+    <button type="button" class="btn-volver" routerLink="/"> <i class="bi bi-reply"></i> Volver</button>
+    <div class="container" *ngIf="experiencia">
+        <div class="row">
+          <h1  class="form-label text-center">Modificar experiencia</h1>
+          <br>
+            <div>
+                <form (ngSubmit)="editarExperiencia()" novalidate #f="ngForm">
+                    <div class="form-group mt-4">
+                        <label for="url_logoEmpresa" class="form-label">Modificar la imagen de la empresa</label>
+                        <input class="form-control" type="file"  id="url_logoEmpresa" name="url_logoEmpresa"  [(ngModel)]="experiencia.url_logoEmpresa" (change)="uploadImgExperiencia($event)"
+                        accept=".jpg, .jpeg, .png"> 
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="nombre" class="form-label">Modificar el nombre de la empresa</label>
+                        <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="experiencia.nombre" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="descripcion" class="form-label">Modificar la descripción de la empresa</label>
+                        <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="experiencia.descripcion" ></textarea>    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="puesto" class="form-label">Modificar el puesto que tiene u obtuvo en la empresa</label>
+                        <input type="text" class="form-control"  id="puesto" name="puesto"  [(ngModel)]="experiencia.puesto" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaInicio" class="form-label">Modificar la fecha de inicio en la empresa</label>
+                        <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="experiencia.fechaInicio" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaFin" class="form-label">Modificar la fecha de finalización en la empresa</label>
+                        <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="experiencia.fechaFin" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="url" class="form-label">Modificar el link de la empresa</label>
+                        <input type="url" class="form-control"  id="url" name="url"   [(ngModel)]="experiencia.url" >    
+                    </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
+                            <button type="submit" class="btn-guardar">Guardar cambios</button>
+                            <br><br><br>
+                        </div>
+                </form>    
+            </div>     
+        </div>
+      </div>
+      <br>
+  </section>
+  <app-footer></app-footer>
+

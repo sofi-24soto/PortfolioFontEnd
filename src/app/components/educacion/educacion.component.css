@@ -1,0 +1,13 @@
+.educacion{
+    padding: 15px;
+    background-color: bisque;
+}
+
+th,
+td {
+    color: white;
+}
+
+.table{
+    background: black;
+}

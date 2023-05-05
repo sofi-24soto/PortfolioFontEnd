@@ -1,0 +1,39 @@
+<section id="proyectos" class="proyectos">
+  <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent rounded" >
+    <div class="row mb-2">
+      <h3 class="text-center">Proyectos</h3>
+    
+    </div>
+    <div class="col-lg-2" *ngIf="isLogged">
+      <button type="button"  class="btn btn-success" routerLink="/addProyecto">
+        <i class="bi bi-plus-square-fill "></i>
+        Nuevo 
+      </button>
+    </div>
+ 
+    <br>
+    <div class="card mb-3 text-bg-dark" style="max-width: 150%;" *ngFor="let Proyecto of proyecto">
+      <br>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end " *ngIf="isLogged">
+         <button type="submit" class="btn btn-primary" routerLink="editProyecto/{{Proyecto.id_proyecto}}"><i class="bi bi-pencil-square" ></i></button> 
+        <button type="button" class="btn btn-danger"  (click)="delete(Proyecto.id_proyecto)" ><i class="bi bi-x-square-fill"></i></button>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img  [src]="Proyecto.url_imgProyecto"  class="img-fluid rounded-start" alt="..."> 
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{Proyecto.tituloProyecto}}</h5>
+            
+            <p class="card-text">{{Proyecto.descripcion}}</p>
+            <p class="card-text"><small class="text-muted">Fecha Inicio: {{Proyecto.fechaInicio | date:"dd-MM-yyyy"}} </small></p>
+            <p class="card-text"><small class="text-muted">Fecha Fin: {{Proyecto.fechaFin  | date:"dd-MM-yyyy"}}</small></p>
+            <p class="card-text"><small class="text-muted">Link del proyecto:  <a [href]="Proyecto.url_proyecto" class="card-link">{{Proyecto.url_proyecto}}</a></small></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  

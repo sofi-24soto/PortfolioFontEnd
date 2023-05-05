@@ -1,0 +1,35 @@
+<div class="addhabilidad">
+  <br><br>
+  <button type="button" class="btn-volver" routerLink="/"> <i class="bi bi-reply"></i> Volver</button>
+  <br><br>
+  <div class="container">
+    <div class="row">
+      <h1  class="form-label text-center">Agregar nueva habilidad</h1>
+      <br>
+        <div>
+          <form (ngSubmit)="crearHabilidad()" novalidate #f="ngForm">
+            <div class="form-group mt-4">
+                <label for="nombre">Agregar el nombre de la habilidad</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" >
+            </div>
+            <div class="form-group mt-4">
+                <label for="porcentaje">Agregar porcentaje de la habilidad</label>
+                <input type="number" class="form-control " min="0" max="100" id="porcentaje" name="porcentaje"  [(ngModel)]="porcentaje" >
+            </div>
+            <br>
+            <div class="modal-footer">
+              <button type="button" class="btn-agregar" (click)="limpiar()">Limpiar</button>
+              <button  type="submit" class="btn btn-agregar">
+                Agregar nueva habilidad
+              </button>
+            </div>
+            <br>
+        </form>   
+        </div>     
+    </div>
+</div>
+<br><br><br><br><br>
+</div>
+    
+<app-footer></app-footer>
+

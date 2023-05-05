@@ -1,0 +1,161 @@
+{
+    "personas": [
+        {
+          "id": 1,
+          "url_banner": "../../../assets/img/imagen2.jpg",
+          "profileImage": "../../../assets/img/photoo.png",
+          "nombre": "Sofia Alejandra",
+          "apellido":"Soto",
+          "email": "sofi22@mail.com",
+          "titulo": "Desarrollador Web Full Stack Jr",
+          "sobreMi": "Me llamo Sofia Alejandra Soto, tengo 25 años y soy de San Salvador de Jujuy - Argentina.Actualmente soy estudiante de la Facultad de Ingeniería en la carrera de APU (Analista Programador Universitario),me encuentro terminando de rendir mis ultimas materias para luego poder trabajar en una Empresa de Desarrollo Web."
+        }
+      ],
+  
+    "experiencias": [
+          {
+            "id": 1,
+            "nombre" : "Trabajo 1",
+            "puesto": "nombre del puesto",
+            "inicio": "12/03/2018",
+            "fin": "12/03/2023",
+            "url": "https://www.Empresa.com/",
+            "logoEmpresa": "../../../assets/img/trabajo1.jpg",
+            "descripcion": "Breve descripcion"
+          }
+           
+      ],
+  
+    "educaciones": [
+          {
+            "id": 1,
+            "nombre" : "E.T.P. N°1 Gral. Aristóbulo Vargas Belmonte",
+            "estudio": "Técnico en Computación",
+            "inicio": "14/03/2011",
+            "fin": "15/12/2016",
+            "urlEstudio": "https://www.facebook.com/ETPBELMONTE/?locale=es_LA",
+            "logoEstudio": "../../../assets/img/ETP.jpg",
+            "descripcion": "Escuela Técnica"
+          },
+          {
+            "id": 2,
+            "nombre": "Facultad de Ingeniería - UNJu ",
+            "estudio": "Analista Programador Universitario",
+            "inicio": "10-04-2017",
+            "fin": "29-06-2023",
+            "urlEstudio": "https://www.fi.unju.edu.ar/",
+            "logoEstudio": "../../../assets/img/facultad.jpg",
+            "descripcion": "Facultad de Ingeniería"
+          }
+      ],
+
+    "habilidades": [
+        {
+            "id": 1,
+            "nombre": "Excel",
+            "porcentaje": "90"
+          },
+          {
+            "id": 2,
+            "nombre": "PSeInt",
+            "porcentaje": "90"
+          },
+          {
+            "id": 3,
+            "nombre": "HTML",
+            "porcentaje": "85"
+          },
+          {
+              "id": 4,
+              "nombre": "CSS",
+              "porcentaje": "89"
+            },
+            {
+              "id": 5,
+              "nombre": "JAVA",
+              "porcentaje": "80"
+            },
+            {
+              "id": 6,
+              "nombre": "JavaScript",
+              "porcentaje": "75"
+            },
+            {
+              "id": 7,
+              "nombre": "Bootstrap",
+              "porcentaje": "100"
+            },
+            {
+              "id": 8,
+              "nombre": "Adaptabilidad",
+              "porcentaje": "80"
+            },
+            {
+                "id": 9,
+                "nombre": "Trabajo en Equipo",
+                "porcentaje": "95"
+              },
+              {
+                "id": 10,
+                "nombre": "Aprendizaje Rápido",
+                "porcentaje": "80"
+              }
+      ],
+
+    "proyectos": [
+        {
+          "id": 1,
+          "tituloProyecto": "Carrousel",
+          "inicio": "05/11/2018",
+          "fin": "07/11/2018",
+          "imgProyecto": "../../../assets/img/proyecto1.png",
+          "urlProyecto": "https://github.com/sofi-24soto",
+          "descripcion": "Carrousel con varias imágenes que giran en circulo."
+      },
+      {
+        "id": 2,
+        "tituloProyecto": "Información de Temas Musicales",
+        "inicio": "11/03/2019",
+        "fin": "18/03/2019",
+        "imgProyecto": "../../../assets/img/proyecto2.png",
+        "urlProyecto": "https://github.com/sofi-24soto",
+        "descripcion": "Con solo ingresar el id de una música muestra la información."
+      },
+      {
+          "id": 3,
+          "tituloProyecto": "Digital News",
+          "inicio": "11/03/2019",
+          "fin": "20/04/2019",
+          "imgProyecto": "../../../assets/img/proyecto3.png",
+          "urlProyecto": "https://github.com/sofi-24soto",
+          "descripcion": "Dependiendo del país que uno selecciones muestra la información."
+          },
+        {
+            "id": 4,
+            "tituloProyecto": "Porfolio Argentina Programa",
+            "inicio": "05/11/2023",
+            "fin": "13/05/2023",
+            "imgProyecto": "../../../assets/img/proyecto4.png",
+            "urlProyecto": "https://github.com/sofi-24soto",
+            "descripcion": "Armado de Proyecto integrador de porfolio web de Argentina Programa, utilizando tecnologias Angular, Apache Netbeans, MySQL Workbench, Boopstrap. Lenguajes HTML, CSS, TypeScript, Java."
+        }
+         
+      ],
+
+    "redes": [
+          
+            {
+              "id": 1,
+              "nombre": "LinkedIn",
+              "url": "https://www.linkedin.com/in/sofia-soto-bb3b051bb/",
+            "icoFont": "fa-brands fa-linkedin fa-xl"
+            },
+            {
+              "id": 2,
+              "nombre": "Github",
+              "url": "https://github.com/sofi-24soto",
+            "icoFont": "fa-brands fa-github fa-xl"
+            }
+      ]
+       
+}

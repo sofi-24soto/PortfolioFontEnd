@@ -1,0 +1,34 @@
+<div class="editHabilidad">
+  <br><br>
+  <div class="container" *ngIf="habilidad">
+    <br>
+    <div class="row">
+      
+      <h1  class="form-label text-center">Modificar habilidad</h1>
+      <br>
+        <div>
+          <form (ngSubmit)="editarHabilidad()" novalidate #f="ngForm">
+            <div class="form-group mt-4">
+                <label for="nombre">Modificar el nombre de la habilidad</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="habilidad.nombre" required>
+            </div>
+            <div class="form-group mt-4">
+                <label for="porcentaje">Modificar porcentaje de la habilidad</label>
+                <input type="number" class="form-control" min="0" max="100" id="porcentaje" name="porcentaje"  [(ngModel)]="habilidad.porcentaje" required>
+            </div>
+            <br>
+            <div class="modal-footer">
+              <button  type="submit" class="btn btn-editar">
+               Guardar cambios
+              </button>
+            </div>
+            <br>
+        </form>   
+        </div>     
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+</div>
+    
+<app-footer></app-footer>
+  

@@ -1,0 +1,16 @@
+.editHabilidad{
+  background-image: url('../../../../../../assets/img/fondo-add.jpg');
+}
+
+.container{
+ 
+  background-color: bisque;
+  border-radius: 40px;
+}
+
+.btn-editar{
+    margin-right: 2%;
+    background: black;
+    color: white;
+    border-radius: 10%;
+}

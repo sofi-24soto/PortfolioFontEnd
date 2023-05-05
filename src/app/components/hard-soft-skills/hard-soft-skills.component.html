@@ -1,0 +1,45 @@
+<section id="habilidades" class="habilidades">
+  <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent rounded" [ngClass]="{fondouser : isLogged}">
+    <div class="row">
+      <h1>Hard & Soft skills</h1>
+      <div class="col-lg-2">
+          <button type="button" routerLink="/addHabilidad" class="btn btn-success" *ngIf="isLogged">
+            <i class="bi bi-plus-square-fill "> Nuevo</i>
+          </button>
+        </div> 
+      <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let Habilidad of habilidad">
+        <br>
+          <circle-progress 
+          [percent]="(Habilidad.porcentaje)"  
+          [subtitle]="(Habilidad.nombre)"
+          [titleColor]="'#212F3C'"
+          [showTitle]="true" 
+          [showUnits]="true"
+          [showSubtitle]="true" 
+          [outerStrokeWidth]="16" 
+          [innerStrokeWidth]="2" 
+          [subtitleFontSize]="'15'"
+          [outerStrokeColor]="'#78C000'"
+          [innerStrokeColor]="'#C7E596'" 
+          [animation]="true" 
+          [animationDuration]="600">
+          </circle-progress>
+    
+          <div>
+              <td *ngIf="isLogged">
+                  <button type="button" class="btn btn-primary" routerLink="/editHabilidad/{{Habilidad.id_habilidad}}">
+                      <i class="bi bi-pencil-fill"></i></button>
+              </td>
+              <td *ngIf="isLogged">
+                  <button  type="button" class="btn btn-danger" (click)="delete(Habilidad.id_habilidad)">
+                    <i class="bi bi-x-square-fill"></i>  
+                  </button>
+              </td>
+          </div> 
+          
+      </div>
+    </div> 
+  
+  </div>
+</section>  
+

@@ -1,0 +1,25 @@
+.addEducacion{
+    background-image: url('../../../../../../assets/img/fondo-add.jpg');
+
+}
+
+.container{
+  background-color: bisque;
+  border-radius: 40px;
+}
+
+.btn-limpiar,
+.btn-agregar{
+    margin-right: 2%;
+    background: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.btn-volver{
+  margin-left: 3%;
+  height: 5%;
+  background: rgb(5, 153, 109);
+  color: white;
+  border-radius: 10%;
+}

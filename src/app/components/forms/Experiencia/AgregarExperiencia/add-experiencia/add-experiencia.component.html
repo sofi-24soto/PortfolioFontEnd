@@ -1,0 +1,52 @@
+<section class="addExperiencia">
+    <br>
+    <button type="button" class="btn-volver" routerLink="/"> <i class="bi bi-reply"></i> Volver</button>
+    <div class="container">
+        <div class="row">
+          <h1  class="form-label text-center">Agregar nueva experiencia</h1>
+          <br>
+            <div>
+                <form (ngSubmit)="crearExperiencia()" novalidate #f="ngForm">
+                    <div class="form-group mt-4">
+                        <label for="url_logoEmpresa" class="form-label">Agregar imagen de la empresa</label>
+                        <input class="form-control" type="file"  id="url_logoEmpresa" name="url_logoEmpresa"  [(ngModel)]="url_logoEmpresa" (change)="uploadImgExperiencia($event)"
+                        accept=".jpg, .jpeg, .png"> 
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="nombre" class="form-label">Agregar nombre de la empresa</label>
+                        <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="nombre" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="descripcion" class="form-label">Agregar descripción de la empresa</label>
+                        <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="descripcion" ></textarea>    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="puesto" class="form-label">Agregar puesto que tiene u obtuvo en la empresa</label>
+                        <input type="text" class="form-control"  id="puesto" name="puesto"  [(ngModel)]="puesto" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaInicio" class="form-label">Agregar fecha de inicio en la empresa</label>
+                        <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="fechaInicio" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="fechaFin" class="form-label">Agregar fecha de finalización en la empresa</label>
+                        <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="fechaFin" >    
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="url" class="form-label">Agregar link de la empresa</label>
+                        <input type="url" class="form-control"  id="url" name="url"   [(ngModel)]="url" >    
+                    </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
+                            <button type="submit" class="btn-agregar">Agregar nueva experiencia</button>
+                            <br><br><br>
+                        </div>
+                </form>    
+            </div>     
+        </div>
+      </div>
+      <br>
+  </section>
+  <app-footer></app-footer>
+
