@@ -10,12 +10,21 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
   styleUrls: ['./edit-habilidad.component.css']
 })
 export class EditHabilidadComponent implements OnInit{
+  form: FormGroup;
   habilidad: Habilidad = null;
 
   constructor(
+    private formBuilder: FormBuilder, 
     private habilidadService: HabilidadService,
     private activatedRouter: ActivatedRoute,
-    private router: Router) { }
+    private router: Router) {
+
+      this.form= this.formBuilder.group({
+        nombre:['',[Validators.required]],  
+        porcentaje:['', [Validators.required, Validators.min(0), Validators.max(100)]],
+          
+      })
+     }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -29,7 +38,15 @@ export class EditHabilidadComponent implements OnInit{
     )
   }
 
-  editarHabilidad(){
+  get Habilidad(){
+    return this.form.get("habilidad");
+  }
+  
+  get Porcentaje(){
+    return this.form.get("porcentaje");
+  }
+
+ onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.habilidadService.update(this.habilidad).subscribe(
       data => {
@@ -39,6 +56,17 @@ export class EditHabilidadComponent implements OnInit{
         this.router.navigate(['']);
       }
     )
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onUpdate();
+      this.router.navigate(['']);
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
   }
 
 }
