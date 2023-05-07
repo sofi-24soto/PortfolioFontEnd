@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class RedesService {
-  url:string = environment.apiURL + 'redes/'
+  url:string = environment.apiURL + '/redes/'
   //url = "http://localhost:8080/redes/"
 
   constructor(private httpClient: HttpClient) { }

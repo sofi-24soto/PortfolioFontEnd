@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class HabilidadService {
-  url:string = environment.apiURL + 'habilidad/'
+  url:string = environment.apiURL + '/habilidad/'
   //url = "http://localhost:8080/habilidad/"
 
   constructor(private httpClient: HttpClient) { }

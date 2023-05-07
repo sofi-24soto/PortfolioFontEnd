@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class PersonaService {
-  url:string = environment.apiURL + 'persona/'
+  url:string = environment.apiURL + '/persona/'
   //url = "http://localhost:8080/persona/"
 
   constructor(private httpClient: HttpClient) { }

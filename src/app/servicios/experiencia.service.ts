@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url:string = environment.apiURL + 'experiencia/'
+  url:string = environment.apiURL + '/experiencia/'
  //url = "http://localhost:8080/experiencia/"
  
   constructor(private httpClient: HttpClient) { }
