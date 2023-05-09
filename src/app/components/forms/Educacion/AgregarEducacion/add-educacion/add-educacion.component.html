@@ -6,43 +6,68 @@
           <h1  class="form-label text-center">Agregar nueva educación</h1>
           <br>
             <div>
-                <form (ngSubmit)="crearEducacion()" novalidate #f="ngForm">
-                    <div class="form-group mt-4">
-                        <label for="url_logoEstudio" class="form-label">Agregar imagen de la institución en donde estudio</label>
-                        <input class="form-control" type="file"  id="url_logoEstudio" name="url_logoEstudio"  [(ngModel)]="url_logoEstudio" (change)="uploadImgEducacion($event)"
-                        accept=".jpg, .jpeg, .png"> 
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="nombre" class="form-label">Agregar nombre de la institución en donde estudio</label>
-                        <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="nombre" >    
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="descripcion" class="form-label">Agregar descripción de la institución </label>
-                        <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="descripcion" ></textarea>    
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="estudio" class="form-label">Agregar título de la institución en donde estudio</label>
-                        <input type="text" class="form-control"  id="estudio" name="estudio"  [(ngModel)]="estudio" >    
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="fechaInicio" class="form-label">Agregar fecha de inicio de sus estudios</label>
-                        <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="fechaInicio" >    
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="fechaFin" class="form-label">Agregar fecha de finalización de sus estudios</label>
-                        <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="fechaFin" >    
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="url_Estudio" class="form-label">Agregar link de la institución </label>
-                        <input type="url" class="form-control"  id="url_Estudio" name="url_Estudio"   [(ngModel)]="url_Estudio" >    
+                <form  [formGroup]="form" (ngSubmit)="onEnviar($event)" name="FormAddEducacion"> 
+                    <div class="mb-3">
+                      <label for="url_logoEstudio" class="form-label">Agregar imagen de la institución en donde estudia o estudió</label>
+                      <input class="form-control" type="file"  formControlName="url_logoEstudio"  (change)="uploadImgEducacion($event)"  >
                     </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
-                            <button type="submit" class="btn-agregar">Agregar nueva educación</button>
-                            <br><br><br>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Agregar nombre de la institución en donde estudia o estudió</label>
+                      <input type="text" class="form-control"  formControlName="nombre"  [ngClass]="{'is-invalid': NombreEducacion.errors && NombreEducacion.touched, 'is-valid': !NombreEducacion.errors && NombreEducacion.touched}" >
+                      <div *ngIf="NombreEducacion.errors && NombreEducacion.touched" class="invalid-feedback">
+                        <div *ngIf="NombreEducacion.errors['required']">El nombre de la institución es un campo requerido.</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="descripcion" class="form-label">Agregar descripción de la institución</label>
+                      <textarea class="form-control" maxlength="500"  rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                      <div *ngIf="Descripcion.errors && Descripcion.touched">    
+                        <p *ngIf="Descripcion.hasError('required')" class="text-danger">
+                          La descripción es requerida.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="estudio" class="form-label">Agregar el nombre del título de la institución en donde estudia o estudió</label>
+                      <input type="text" class="form-control"  formControlName="estudio" [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}">
+                      <div *ngIf="Titulo.errors && Titulo.touched" class="invalid-feedback">
+                        <div *ngIf="Titulo.errors['required']">El nombre del título es un campo requerido.</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="fechaInicio" class="form-label">Agregar fecha de inicio de sus estudios</label>
+                      <input type="date" class="form-control"    formControlName="fechaInicio" [ngClass]="{'is-invalid': FechaI.errors &&  FechaI.touched, 'is-valid': !FechaI.errors &&  FechaI.touched}">
+                      <div *ngIf="FechaI.errors && FechaI.touched" class="invalid-feedback">
+                        <div *ngIf="FechaI.errors['required']">La fecha de inicio es requerida.</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="fechaFin" class="form-label">Agregar fecha de finalización de sus estudios</label>
+                      <input type="date" class="form-control"  formControlName="fechaFin" [ngClass]="{'is-invalid': FechaF.errors &&  FechaF.touched, 'is-valid': !FechaF.errors &&  FechaF.touched}"> 
+                      <div *ngIf="FechaF.errors && FechaF.touched" class="invalid-feedback">
+                        <div *ngIf="FechaF.errors['required']">La fecha de finalización es requerida.</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="url" class="form-label">Agregar link de la institución</label> 
+                        <input type="text" class="form-control"  formControlName="url"  [ngClass]="{'is-invalid': Link.errors && Link.touched, 'is-valid': !Link.errors && Link.touched}" >
+                        <div *ngIf="Link.errors && Link.touched" class="invalid-feedback">
+                          <div *ngIf="Link.errors['required']">El link es un campo requerido.</div>
                         </div>
-                </form>    
+                      </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
+                      <button type="submit" class="btn-agregar">Agregar nueva educación</button>          
+                    </div>
+                    <br>
+            </form>   
             </div>     
         </div>
       </div>

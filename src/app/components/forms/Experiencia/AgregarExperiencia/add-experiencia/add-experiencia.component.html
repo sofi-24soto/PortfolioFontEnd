@@ -3,6 +3,7 @@
     <button type="button" class="btn-volver" routerLink="/"> <i class="bi bi-reply"></i> Volver</button>
     <div class="container">
         <div class="row">
+        <br>
           <h1  class="form-label text-center">Agregar nueva experiencia</h1>
           <br>
             <div>
@@ -22,7 +23,7 @@
 
                         <div class="mb-3">
                           <label for="descripcion" class="form-label">Agregar descripción de la empresa</label>
-                          <textarea class="form-control"   rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                          <textarea class="form-control" maxlength="500"  rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
                           <div *ngIf="Descripcion.errors && Descripcion.touched">    
                             <p *ngIf="Descripcion.hasError('required')" class="text-danger">
                               La descripción es requerida.
@@ -63,11 +64,11 @@
                           </div>
 
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-                          <button type="submit" class="btn btnLogin">Agregar nueva experiencia</button>          
+                          <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
+                          <button type="submit" class="btn-agregar">Agregar nueva experiencia</button>          
                         </div>
-        
-                    </form>   
+                        <br>
+                </form>   
             </div>     
         </div>
       </div>
