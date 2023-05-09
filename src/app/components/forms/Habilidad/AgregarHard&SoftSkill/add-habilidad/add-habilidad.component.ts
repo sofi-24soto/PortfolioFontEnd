@@ -21,7 +21,6 @@ export class AddHabilidadComponent implements OnInit{
       this.form= this.formBuilder.group({
         nombre:['',[Validators.required]],  
         porcentaje:['', [Validators.required, Validators.min(0), Validators.max(100)]],  
-        personaid:[1],
       })
 
      }
