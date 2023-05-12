@@ -28,14 +28,44 @@
                       </p>
                 </div>
              </div>
-      
                    
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-                        <button type="submit" class="btn btnLogin">Agregar nueva red social</button>
+                        <button type="button" class="btn-limpiar" (click)="limpiar()">Limpiar</button>
+                        <button type="submit" class="btn-agregar">Agregar nueva red social</button>
                       </div>
+                      <br><br>
              </form>   
-          </div>     
+          </div>  
+          <br><br>
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th class="col-1">Nombre de la red social</th>
+                <th class="col-1">Icono</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="col-1">Telegram</th>
+                <td class="col-1">bi bi-telegram</td>
+              </tr>
+              <tr>
+                <th class="col-1">WhatsApp</th>
+                <td class="col-1" > bi bi-whatsapp</td>
+              </tr>
+              <tr>
+                <th class="col-1">Instagram</th>
+                <td class="col-1">bi bi-instagram</td>
+              </tr>
+              <tr>
+                <th class="col-1">Facebook</th>
+                <td class="col-1">bi bi-facebook</td>
+              </tr>
+            </tbody>
+          </table>  
+          <br>
+          <p>Recomendación para completar el campo de Icono<span class="text-danger">*</span>: Seleccione en la tabla de la columna Icono y luego pegué 
+            en el campo de "Agregar icono de la red social" para obtener el icono de la red social.</p>
       </div>
   </div>
   <br><br><br><br>

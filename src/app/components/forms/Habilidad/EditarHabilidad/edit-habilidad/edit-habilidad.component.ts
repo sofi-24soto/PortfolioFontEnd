@@ -11,7 +11,7 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
 })
 export class EditHabilidadComponent implements OnInit{
   form: FormGroup;
-  habilidad: Habilidad = null;
+  habilidad: Habilidad;
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -39,7 +39,7 @@ export class EditHabilidadComponent implements OnInit{
   }
 
   get Habilidad(){
-    return this.form.get("habilidad");
+    return this.form.get("nombre");
   }
   
   get Porcentaje(){
@@ -48,7 +48,7 @@ export class EditHabilidadComponent implements OnInit{
 
  onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.habilidadService.update(this.habilidad).subscribe(
+    this.habilidadService.update(this.form.value).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {

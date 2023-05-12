@@ -14,3 +14,12 @@
     color: white;
     border-radius: 10%;
 }
+
+
+.btn-volver{
+  margin-left: 3%;
+  height: 5%;
+  background: rgb(5, 153, 109);
+  color: white;
+  border-radius: 10%;
+}
