@@ -8,33 +8,33 @@
         <h1  class="form-label text-center">Agregar nueva red social</h1>
         <br>
           <div>
-            <form (ngSubmit)="crearRed()" novalidate #f="ngForm">
-              <div class="form-group mt-4">
-                  <label for="url_redes">Agregar el lik de la red social</label>
-                  <input type="url" class="form-control" id="url_redes" name="url_redes" [(ngModel)]="url_redes" >
-              </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="addFormRedes"> 
+              <div class="mb-3">
+                  <label for="url_redes" class="form-label">Agregar el link de la red social</label>
+                  <input type="url" class="form-control"  formControlName="url_redes" [ngClass]="{'is-invalid': Link.errors && Link.touched, 'is-valid': !Link.errors && Link.touched}">
+                  <div *ngIf="Link.errors && Link.touched">    
+                       <p *ngIf="Link.hasError('required')" class="text-danger">
+                         El link de la red social es un campo es requerido.
+                        </p>
+                  </div>
+               </div>
 
-              
-              <div class="form-group mt-4">
-                <label for="url_redes">Agregar el link de la red social</label>
-                <select class="form-select" aria-label="url_redes" [(ngModel)]="url_redes">
-                    <option selected>Seleccionar...</option>
-                    <option value="1">bi bi-twitter</option>
-                    <option value="2">bi bi-telegram</option>
-                    <option value="3">bi bi-facebook</option>
-                    <option value="4">bi bi-tiktok</option>
-                    <option value="5">bi bi-whatsapp</option>
-                  </select>
-              </div>
-              <br><br>
-              <div class="modal-footer">
-                <button type="button" class="btn-agregar" (click)="limpiar()">Limpiar</button>
-                <button  type="submit" class="btn btn-agregar">
-                  Agregar nueva red social
-                </button>
-              </div>
-              <br><br>
-          </form>   
+               <div class="mb-3">
+                <label for="icoFont" class="form-label">Agregar el icono de la red social</label>
+                <input type="text" class="form-control"  formControlName="icoFont" [ngClass]="{'is-invalid': Icono.errors && Icono.touched, 'is-valid': !Icono.errors && Icono.touched}">
+                <div *ngIf="Icono.errors && Icono.touched">    
+                     <p *ngIf="Icono.hasError('required')" class="text-danger">
+                       El icono de la red social es un campo es requerido.
+                      </p>
+                </div>
+             </div>
+      
+                   
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+                        <button type="submit" class="btn btnLogin">Agregar nueva red social</button>
+                      </div>
+             </form>   
           </div>     
       </div>
   </div>
