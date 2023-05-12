@@ -48,7 +48,7 @@ export class EditHabilidadComponent implements OnInit{
 
  onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.habilidadService.update(this.form.value).subscribe(
+    this.habilidadService.update(id,this.form.value).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {

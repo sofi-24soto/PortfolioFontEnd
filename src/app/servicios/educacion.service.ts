@@ -29,8 +29,8 @@ export class EducacionService {
   }
 
   // Editar una educacion
-  public update(educacion: Educacion): Observable<any>{
-    return this.httpClient.put<any>(this.url + 'editar', educacion);
+  public update(id:number,educacion: Educacion): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, educacion);
   }
 
   // Borrar una educacion

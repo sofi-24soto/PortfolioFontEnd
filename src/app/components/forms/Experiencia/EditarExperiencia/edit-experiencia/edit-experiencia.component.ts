@@ -30,7 +30,7 @@ export class EditExperienciaComponent  implements OnInit{
   editarExperiencia(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.experiencia.url_logoEmpresa = this.imgExperienciaService.urlExperiencia
-    this.experienciaService.update(this.experiencia).subscribe(
+    this.experienciaService.update(id,this.experiencia).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

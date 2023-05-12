@@ -37,7 +37,7 @@ export class EditPortadaComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.url_banner = this.imgPortadaService.urlPortada
     this.persona.url_fotoPerfil = this.imgPerfilService.urlPerfil
-    this.personaService.update(this.persona).subscribe(
+    this.personaService.update(id,this.persona).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

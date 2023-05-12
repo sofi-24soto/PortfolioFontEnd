@@ -29,7 +29,7 @@ export class EditProyectoComponent implements OnInit {
   editarProyecto(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.proyecto.url_imgProyecto = this.imgProyectoService.urlProyecto
-    this.proyectoService.update(this.proyecto).subscribe(
+    this.proyectoService.update(id,this.proyecto).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

@@ -31,8 +31,8 @@ export class PersonaService {
   }
 
   // Editar una persona
-  public update(persona : Persona): Observable<any>{
-    return this.httpClient.put<any>(this.url + 'editar', persona);
+  public update(id:number,persona : Persona): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, persona);
   }
 
   // Borrar una persona

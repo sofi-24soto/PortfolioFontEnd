@@ -29,8 +29,8 @@ export class RedesService {
   }
 
   // Editar una red
-  public update(redes : Redes): Observable<any>{
-    return this.httpClient.put<any>(this.url + 'editar', redes);
+  public update(id:number,redes : Redes): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, redes);
   }
 
   // Borrar una red

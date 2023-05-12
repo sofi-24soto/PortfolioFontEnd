@@ -31,7 +31,7 @@ export class EditEducacionComponent implements OnInit {
   editarEducacion(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacion.url_logoEstudio = this.imgEducacionService.urlEducacion
-    this.educacionService.update(this.educacion).subscribe(
+    this.educacionService.update(id,this.educacion).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

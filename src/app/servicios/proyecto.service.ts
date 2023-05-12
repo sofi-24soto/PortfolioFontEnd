@@ -29,8 +29,8 @@ export class ProyectoService {
   }
 
   // Editar un proyecto
-  public update(proyecto : Proyecto): Observable<any>{
-    return this.httpClient.put<any>(this.url + 'editar', proyecto);
+  public update(id:number,proyecto : Proyecto): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, proyecto);
   }
 
   // Borrar un proyecto
