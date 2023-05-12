@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
 
       this.form= this.formBuilder.group({
         nombreUsuario:['',[Validators.required]],  
-        password:['', [Validators.required, Validators.min(0), Validators.max(8)]],  
+        password:['', [Validators.required]]  
       })
     }
 
