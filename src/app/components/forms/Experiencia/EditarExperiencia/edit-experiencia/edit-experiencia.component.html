@@ -8,32 +8,32 @@
             <div>
                 <form (ngSubmit)="editarExperiencia()" novalidate #f="ngForm">
                     <div class="form-group mt-4">
-                        <label for="url_logoEmpresa" class="form-label">Modificar la imagen de la empresa</label>
+                        <label for="url_logoEmpresa" class="form-label">Modificar la imagen de la empresa<span class="text-danger">*</span></label>
                         <input class="form-control" type="file"  id="url_logoEmpresa" name="url_logoEmpresa"  [(ngModel)]="experiencia.url_logoEmpresa" (change)="uploadImgExperiencia($event)"
                         accept=".jpg, .jpeg, .png"> 
                     </div>
                     <div class="form-group mt-4">
-                        <label for="nombre" class="form-label">Modificar el nombre de la empresa</label>
+                        <label for="nombre" class="form-label">Modificar el nombre de la empresa<span class="text-danger">*</span></label>
                         <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="experiencia.nombre" >    
                     </div>
                     <div class="form-group mt-4">
-                        <label for="descripcion" class="form-label">Modificar la descripción de la empresa</label>
+                        <label for="descripcion" class="form-label">Modificar la descripción de la empresa<span class="text-danger">*</span></label>
                         <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="experiencia.descripcion" ></textarea>    
                     </div>
                     <div class="form-group mt-4">
-                        <label for="puesto" class="form-label">Modificar el puesto que tiene u obtuvo en la empresa</label>
+                        <label for="puesto" class="form-label">Modificar el puesto que tiene u obtuvo en la empresa<span class="text-danger">*</span></label>
                         <input type="text" class="form-control"  id="puesto" name="puesto"  [(ngModel)]="experiencia.puesto" >    
                     </div>
                     <div class="form-group mt-4">
-                        <label for="fechaInicio" class="form-label">Modificar la fecha de inicio en la empresa</label>
+                        <label for="fechaInicio" class="form-label">Modificar la fecha de inicio en la empresa<span class="text-danger">*</span></label>
                         <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="experiencia.fechaInicio" >    
                     </div>
                     <div class="form-group mt-4">
-                        <label for="fechaFin" class="form-label">Modificar la fecha de finalización en la empresa</label>
+                        <label for="fechaFin" class="form-label">Modificar la fecha de finalización en la empresa<span class="text-danger">*</span></label>
                         <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="experiencia.fechaFin" >    
                     </div>
                     <div class="form-group mt-4">
-                        <label for="url" class="form-label">Modificar el link de la empresa</label>
+                        <label for="url" class="form-label">Modificar el link de la empresa<span class="text-danger">*</span></label>
                         <input type="url" class="form-control"  id="url" name="url"   [(ngModel)]="experiencia.url" >    
                     </div>
 

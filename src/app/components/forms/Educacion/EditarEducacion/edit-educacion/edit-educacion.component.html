@@ -9,31 +9,31 @@
           <div>
               <form (ngSubmit)="editarEducacion()" novalidate #f="ngForm">
                   <div class="form-group mt-4">
-                      <label for="url_logoEstudio" class="form-label">Modificar la imagen de la institución en donde estudio</label>
+                      <label for="url_logoEstudio" class="form-label">Modificar la imagen de la institución en donde estudio<span class="text-danger">*</span></label>
                       <input class="form-control" type="file"  id="url_logoEstudio" name="url_logoEstudio"  [(ngModel)]="educacion.url_logoEstudio" (change)="uploadImgEducacion($event)"> 
                   </div>
                   <div class="form-group mt-4">
-                      <label for="nombre" class="form-label">Modificar el nombre de la institución en donde estudio</label>
+                      <label for="nombre" class="form-label">Modificar el nombre de la institución en donde estudio<span class="text-danger">*</span></label>
                       <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="educacion.nombre" >    
                   </div>
                   <div class="form-group mt-4">
-                      <label for="descripcion" class="form-label">Modificar la descripción de la institución </label>
+                      <label for="descripcion" class="form-label">Modificar la descripción de la institución<span class="text-danger">*</span> </label>
                       <textarea type="text" class="form-control" maxlength="500" id="descripcion" name="descripcion"  [(ngModel)]="educacion.descripcion" ></textarea>    
                   </div>
                   <div class="form-group mt-4">
-                      <label for="estudio" class="form-label">Modificar el título de la institución en donde estudio</label>
+                      <label for="estudio" class="form-label">Modificar el título de la institución en donde estudio<span class="text-danger">*</span></label>
                       <input type="text" class="form-control"  id="estudio" name="estudio"  [(ngModel)]="educacion.estudio" >    
                   </div>
                   <div class="form-group mt-4">
-                      <label for="fechaInicio" class="form-label">Modificar la fecha de inicio de sus estudios</label>
+                      <label for="fechaInicio" class="form-label">Modificar la fecha de inicio de sus estudios<span class="text-danger">*</span></label>
                       <input type="date" class="form-control"  id="fechaInicio" name="fechaInicio"   [(ngModel)]="educacion.fechaInicio" >    
                   </div>
                   <div class="form-group mt-4">
-                      <label for="fechaFin" class="form-label">Modificar la fecha de finalización de sus estudios</label>
+                      <label for="fechaFin" class="form-label">Modificar la fecha de finalización de sus estudios<span class="text-danger">*</span></label>
                       <input type="date" class="form-control"  id="fechaFin" name="fechaFin"  [(ngModel)]="educacion.fechaFin" >    
                   </div>
                   <div class="form-group mt-4">
-                      <label for="url_Estudio" class="form-label">Modificar el link de la institución</label>
+                      <label for="url_Estudio" class="form-label">Modificar el link de la institución<span class="text-danger">*</span></label>
                       <input type="url" class="form-control"  id="url_Estudio" name="url_Estudio"   [(ngModel)]="educacion.url_Estudio" >    
                   </div>
 

@@ -8,31 +8,31 @@
           <div>
             <form (ngSubmit)="editarPersona()" novalidate #f="ngForm">
               <div class="form-group">
-                  <label for="url_banner" class="form-label">Modificar imagen de banner</label>
+                  <label for="url_banner" class="form-label">Modificar imagen de banner<span class="text-danger">*</span></label>
                   <input class="form-control" type="file" id="url_banner" name="url_banner"   [(ngModel)]="persona.url_banner" (change)="uploadImgPortada($event)" >
                  
               </div>
               <div class="form-group mt-4">
-                  <label for="url_fotoPerfil" class="form-label">Modificar imagen de perfil</label>
+                  <label for="url_fotoPerfil" class="form-label">Modificar imagen de perfil<span class="text-danger">*</span></label>
                   <input class="form-control" type="file"  id="url_fotoPerfil" name="url_fotoPerfil"  [(ngModel)]="persona.url_fotoPerfil" (change)="uploadImgPerfil($event)">
                 
                 </div>
                 <div class="form-group mt-4">
-                  <label for="nombre" class="form-label">Modificar Nombre</label>
+                  <label for="nombre" class="form-label">Modificar Nombre<span class="text-danger">*</span></label>
                   <input type="text" class="form-control"  id="nombre" name="nombre"  [(ngModel)]="persona.nombre" >
                   
                 </div>
                 <div class="form-group mt-4">
-                  <label for="apellido" class="form-label">Modificar Apellido</label>
+                  <label for="apellido" class="form-label">Modificar Apellido<span class="text-danger">*</span></label>
                   <input type="text" class="form-control"  id="apellido" name="apellido"    [(ngModel)]="persona.apellido" >
                   
                 </div>
                 <div class="form-group mt-4">
-                  <label for="titulo" class="form-label">Modificar Titulo</label>
+                  <label for="titulo" class="form-label">Modificar Titulo<span class="text-danger">*</span></label>
                   <input type="text" class="form-control"  id="titulo" name="titulo" [(ngModel)]="persona.titulo" >
                 </div>
                 <div class="form-group mt-4">
-                  <label for="sobreMi" class="form-label">Modificar Sobre Mi</label>
+                  <label for="sobreMi" class="form-label">Modificar Sobre Mi<span class="text-danger">*</span></label>
                   <textarea type="text" class="form-control"  id="sobreMi" name="sobreMi"   [(ngModel)]="persona.sobreMi" ></textarea>
                 </div> 
                 <br>
