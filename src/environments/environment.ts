@@ -1,13 +1,12 @@
 export const environment = {
   firebase: {
-    projectId: 'portfolio-frontend-33e62',
-    appId: '1:755995025020:web:095556d0910803c916f3f9',
-    storageBucket: 'portfolio-frontend-33e62.appspot.com',
+    projectId: 'portfoliofrontend-fa06a',
+    appId: '1:641538634392:web:8d97f1d71ab4d0e3b156ed',
+    storageBucket: 'portfoliofrontend-fa06a.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyC30iQQ_bnz-6NYLBaV5ibeT01701Ouhsg',
-    authDomain: 'portfolio-frontend-33e62.firebaseapp.com',
-    messagingSenderId: '755995025020',
-    measurementId: 'G-2KQF9NFWJV',
+    apiKey: 'AIzaSyCv4IDLWmUwb7Cwe_r2RmZCPsj5gTb-fdI',
+    authDomain: 'portfoliofrontend-fa06a.firebaseapp.com',
+    messagingSenderId: '641538634392',
   },
     production: true,
     url: 'http://localhost:8080/'
